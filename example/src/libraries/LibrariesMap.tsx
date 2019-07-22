@@ -28,8 +28,8 @@ const renderMarkers = (libraries) => {
 
 const coords = (coords) => {
     const coordsArray = coords.split(",")
-    const latitude = coordsArray[0].slice(1,10)
-    const longitude = coordsArray[1].slice(0, 10);
+    const latitude = parseFloat(coordsArray[0].slice(1,10))
+    const longitude = parseFloat(coordsArray[1].slice(0, 10))
     const coord = {latitude:latitude, longitude:longitude}
     return coord
 }
