@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, Dimensions } from 'react-native';
-import { TabView, SceneMap,SceneRendererProps,TabBar } from 'react-native-tab-view';
+import { TabView, SceneMap,SceneRendererProps,TabBar, NavigationState } from 'react-native-tab-view';
 import { LibrariesMap } from './LibrariesMap';
 import { Ionicons } from '@expo/vector-icons';
 import { LibrariesList } from './LibrariesList';
@@ -10,9 +10,18 @@ const initialLayout = {
   width: Dimensions.get('window').width,
 };
 
-export default class LibrariesTab extends React.Component {
+type Route = {
+  key: string;
+  title:String;
+  icon: string;
+  color: [number, number, number];
+};
+
+type State = NavigationState<Route>;
+
+export default class CustomIndicatorExample extends React.Component<{}, State> {
   static title = 'Colombian Libraries';
-  static backgroundColor = '#263238';
+  static backgroundColor = '#1E63B1';
   static appbarElevation = 4;
 
   state = {

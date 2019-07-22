@@ -12,7 +12,6 @@ import Animated from 'react-native-reanimated';
 import Albums from './Shared/Albums';
 import Article from './Shared/Article';
 import Contacts from './Shared/Contacts';
-import LibrariesTab from './libraries/LibrariesTab';
 
 
 type Route = {
@@ -40,11 +39,6 @@ export default class CustomIndicatorExample extends React.Component<{}, State> {
         key: 'contacts',
         icon: 'ios-people',
         color: [0, 132, 255],
-      },
-      {
-        key: 'libraries',
-        icon: 'ios-book',
-        color: [76, 174, 128],
       },
       {
         key: 'albums',
@@ -159,7 +153,6 @@ export default class CustomIndicatorExample extends React.Component<{}, State> {
     article: Article,
     contacts: Contacts,
     albums: Albums,
-    libraries: LibrariesTab
   });
 
   render() {
