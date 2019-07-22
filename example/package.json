@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "tabviewexample",
+=======
+  "name": "demo_site_with_libraries",
+>>>>>>> andres-ceballos
   "version": "0.0.2",
   "private": true,
   "main": "index.js",
